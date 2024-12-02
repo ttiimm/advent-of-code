@@ -1,0 +1,16 @@
+{
+  "name": "aoc_2024",
+  "version": "1.0.0",
+  "description": "Advent of Code for 2024",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
