@@ -1,6 +1,6 @@
 {
   "include": [
-    "./src/day02.ts"
+    "./src/day03.ts"
   ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
