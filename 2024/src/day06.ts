@@ -1,6 +1,6 @@
 function _readInputs(): string {
     const fs = require('fs');
-    return fs.readFileSync("./2024/input/day06/input.txt", "utf-8");
+    return fs.readFileSync("./input/day06/input.txt", "utf-8");
 }
 
 enum Bearing {
