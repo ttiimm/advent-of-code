@@ -1,7 +1,4 @@
-function _readInputs(): string {
-    const fs = require('fs');
-    return fs.readFileSync("./input/day04/input.txt", "utf-8");
-}
+import fs from 'fs';
 
 enum Bearing {
     North, NorthEast, East, SouthEast, South, SouthWest, West, NorthWest
@@ -38,7 +35,7 @@ const NEXT: { [key: string]: string | typeof Done } = {
 }
 
 function find(): number {
-    const input = _readInputs();
+    const input = fs.readFileSync("./input/day04/input.txt", "utf-8");
     const grid = input.split('\n');
     let count = 0;
     for (let y = 0; y < grid.length; y++) {
@@ -54,7 +51,7 @@ function find(): number {
 }
 
 function findMas(): number {
-    const input = _readInputs();
+    const input = fs.readFileSync("./input/day04/input.txt", "utf-8");
     const grid = input.split('\n');
     let count = 0;
     for (let y = 0; y < grid.length; y++) {

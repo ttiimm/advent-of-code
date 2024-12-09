@@ -1,7 +1,4 @@
-function _readInputs(): string {
-    const fs = require('fs');
-    return fs.readFileSync("./input/day05/input.txt", "utf-8");
-}
+import fs from 'fs';
 
 class Input {
     rules: Map<string, string[]> = new Map();
@@ -10,7 +7,7 @@ class Input {
 }
 
 function toPrint(): number {
-    const input = _readInputs();
+    const input = fs.readFileSync("./input/day05/input.txt", "utf-8");
     const built = _build(input);
     let sum = 0;
     for (const check of built.toCheck) {
@@ -20,7 +17,7 @@ function toPrint(): number {
 }
 
 function toFix(): number {
-    const input = _readInputs();
+    const input = fs.readFileSync("./input/day05/input.txt", "utf-8");
     const built = _build(input);
     let sum = 0;
     for (const check of built.toCheck) {

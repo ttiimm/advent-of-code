@@ -1,10 +1,7 @@
-function _readInputs(): string {
-    const fs = require('fs');
-    return fs.readFileSync("./input/day03/input.txt", "utf-8");
-}
+import fs from 'fs';
 
 function mul(): number {
-    const input = _readInputs();
+    const input = fs.readFileSync("./input/day03/input.txt", "utf-8");
     const mulRegex = /mul\((\d{1,3}),(\d{1,3})\)/g;
     const matches = [...input.matchAll(mulRegex)];
     if (!matches) {
@@ -21,7 +18,7 @@ function mul(): number {
 }
 
 function mulDoDont(): number {
-    const input = _readInputs();
+    const input = fs.readFileSync("./input/day03/input.txt", "utf-8");
     const r = /mul\((\d{1,3}),(\d{1,3})\)|(do|don't)\(\)/g;
     const matches = [...input.matchAll(r)];
     if (!matches) {

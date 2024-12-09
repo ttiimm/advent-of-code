@@ -1,7 +1,4 @@
-function _readInputs(): string {
-    const fs = require('fs');
-    return fs.readFileSync("./input/day07/input.txt", "utf-8");
-}
+import fs from 'fs';
 
 class Equation {
     target: number
@@ -19,7 +16,7 @@ class Equation {
 }
 
 function calibrate(): number {
-    const input = _readInputs();
+    const input = fs.readFileSync("./input/day07/input.txt", "utf-8");
     const equations = _parse(input);
     let sum = 0;
     for (const eq of equations) {
@@ -29,7 +26,7 @@ function calibrate(): number {
 }
 
 function concatenate(): number {
-    const input = _readInputs();
+    const input = fs.readFileSync("./input/day07/input.txt", "utf-8");
     const equations = _parse(input);
     let sum = 0;
     for (const eq of equations) {

@@ -1,3 +1,6 @@
+import fs from 'fs';
+import readline from 'readline';
+
 class Inputs {
     left: number[] = [];
     right: number[] = [];
@@ -5,8 +8,6 @@ class Inputs {
 
 async function _readInputs(): Promise<Inputs> {
     const inputs = new Inputs();
-    const fs = require('fs');
-    const readline = require('readline');
     const fileStream = fs.createReadStream("./input/day01/input.txt");
     const rl = readline.createInterface({
         input: fileStream,
@@ -14,8 +15,8 @@ async function _readInputs(): Promise<Inputs> {
 
     for await (const line of rl) {
         const [first, second] = line.split("   ");
-        inputs.left.push(first);
-        inputs.right.push(second);
+        inputs.left.push(parseInt(first));
+        inputs.right.push(parseInt(second));
     }
     // inputs.left = [3, 4, 2, 1, 3, 3];
     // inputs.right = [4, 3, 5, 3, 9, 3];

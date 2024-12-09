@@ -1,6 +1,7 @@
+import fs from 'fs';
+import readline from 'readline';
+
 async function _readInputs(): Promise<Array<number[]>> {
-    const fs = require('fs');
-    const readline = require('readline');
     const fileStream = fs.createReadStream("./input/day02/input.txt");
     const rl = readline.createInterface({
         input: fileStream,

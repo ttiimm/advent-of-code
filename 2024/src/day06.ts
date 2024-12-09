@@ -1,7 +1,4 @@
-function _readInputs(): string {
-    const fs = require('fs');
-    return fs.readFileSync("./input/day06/input.txt", "utf-8");
-}
+import fs from 'fs';
 
 enum Bearing {
     North, NorthEast, East, SouthEast, South, SouthWest, West, NorthWest
@@ -225,7 +222,7 @@ function bruteforce(input: string) {
 }
 
 function findPositions() {
-    const input = _readInputs();
+    const input = fs.readFileSync("./input/day06/input.txt", "utf-8");
     const grid = input.split('\n');
     const guard = new Guard(grid);
     while (guard.look() !== null) {
