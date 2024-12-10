@@ -3,7 +3,7 @@ import fs from 'fs';
 type Coord = { x: number, y: number }
 
 function antinodes(repeat: boolean = false): number {
-    const input = fs.readFileSync("./2024/input/day08/input.txt", "utf-8");
+    const input = fs.readFileSync("./input/day08/input.txt", "utf-8");
     const antennas = findAntennas(input);
     const nodes = findAntinodes(input, antennas, repeat);
     return nodes.size;
